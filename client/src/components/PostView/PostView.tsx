@@ -1,13 +1,19 @@
+import { FC } from 'react';
+import { Post } from '../../api/Post';
 import './PostView.css';
 
-function formatDate(timestamp) {
+function formatDate(timestamp: number): string {
   const date = new Date(timestamp);
   return `${date.toLocaleDateString()} ${date.toLocaleTimeString(undefined, {
     timeStyle: 'medium',
   })}`;
 }
 
-export const PostView = ({ post }) => {
+export interface PostViewProps {
+  post: Post;
+}
+
+export const PostView: FC<PostViewProps> = ({ post }) => {
   return (
     <div className="post-view">
       <p className="post-view__text">{post.text}</p>

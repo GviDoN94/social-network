@@ -1,3 +1,5 @@
+import { FC } from 'react';
+import { User } from '../../api/User';
 import {
   getColorIndexByUsername,
   getColorByIndex,
@@ -5,7 +7,11 @@ import {
 } from './getColorByUsername';
 import './UserView.css';
 
-export const UserView = ({ user }) => {
+export interface UserViewProps {
+  user: User;
+}
+
+export const UserView: FC<UserViewProps> = ({ user }) => {
   const colorIndex = getColorIndexByUsername(user.username);
 
   return (
