@@ -1,9 +1,10 @@
 import { FC } from 'react';
-import { fetchUser } from '../../api/User';
 import { useQuery } from '@tanstack/react-query';
-import { queryClient } from '../../api/queryClient';
+
+import { fetchUser } from '@/api/User';
+import { queryClient } from '@/api/queryClient';
+import { Loader } from '@/components/Loader';
 import { UserView } from './';
-import { Loader } from '../Loader';
 
 interface FetchUserViewProps {
   userId: string;

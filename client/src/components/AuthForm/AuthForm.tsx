@@ -1,8 +1,11 @@
 import { FC, useState } from 'react';
 
-import { LoginForm } from '../LoginForm';
-import { RegistrationForm } from '../RegistrationForm';
-import { SegmentedSwitch, SegmentedSwitchOption } from '../SegmentedSwitch';
+import { LoginForm } from '@/components/LoginForm';
+import { RegistrationForm } from '@/components/RegistrationForm';
+import {
+  SegmentedSwitch,
+  SegmentedSwitchOption,
+} from '@/components/SegmentedSwitch';
 import './AuthForm.css';
 
 type AuthType = 'login' | 'registration';

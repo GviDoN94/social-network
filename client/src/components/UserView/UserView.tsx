@@ -1,5 +1,6 @@
 import { FC } from 'react';
-import { User } from '../../api/User';
+
+import { User } from '@/api/User';
 import {
   getColorIndexByUsername,
   getColorByIndex,

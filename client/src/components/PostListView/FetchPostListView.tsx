@@ -1,8 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
-import { fetchPostList } from '../../api/Post';
-import { Loader } from '../Loader';
+
+import { fetchPostList } from '@/api/Post';
+import { queryClient } from '@/api/queryClient';
+import { Loader } from '@/components/Loader';
 import { PostListView } from './PostListView';
-import { queryClient } from '../../api/queryClient';
 
 export const FetchPostListView = () => {
   const postListQuery = useQuery(

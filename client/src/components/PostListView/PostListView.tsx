@@ -1,6 +1,7 @@
 import { FC } from 'react';
-import { PostView } from '../PostView';
-import { PostList } from '../../api/Post';
+
+import { PostView } from '@/components/PostView';
+import { PostList } from '@/api/Post';
 import './PostListView.css';
 
 export interface PostListViewProps {

@@ -1,5 +1,5 @@
-import './App.css';
-import { FetchPostListView } from './components/PostListView';
+import '@/App.css';
+import { FetchPostListView } from '@/components/PostListView';
 
 function App() {
   return (
