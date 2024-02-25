@@ -6,6 +6,7 @@ import {
   getColorByIndex,
   getGradientByIndex,
 } from './getColorByUsername';
+
 import './UserView.css';
 
 export interface UserViewProps {

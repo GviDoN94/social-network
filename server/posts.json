@@ -22,5 +22,17 @@
     "text": "А ты как?",
     "authorId": "df7182dd-b3c6-46cf-9133-f922f988c75d",
     "createdAt": 1704901870088
+  },
+  "f700f432-8cd3-4a69-ab03-3bc6a97cf28b": {
+    "id": "f700f432-8cd3-4a69-ab03-3bc6a97cf28b",
+    "text": "Привет всем!",
+    "authorId": "305be2f3-ae37-4eff-a64e-643d92b58fa1",
+    "createdAt": 1708883055315
+  },
+  "6eb19756-0c9d-4f8f-a3d1-497b7dea2183": {
+    "id": "6eb19756-0c9d-4f8f-a3d1-497b7dea2183",
+    "text": "Как у вас дела?",
+    "authorId": "305be2f3-ae37-4eff-a64e-643d92b58fa1",
+    "createdAt": 1708883199582
   }
 }

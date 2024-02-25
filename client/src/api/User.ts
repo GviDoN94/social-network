@@ -1,5 +1,7 @@
 import { z } from 'zod';
 
+import { validateResponse } from '@/api/validateResponse';
+
 export const UserScheme = z.object({
   id: z.string(),
   username: z.string(),
@@ -24,14 +26,6 @@ export const registerUser = (
   }).then(() => undefined);
 };
 
-const validateResponse = async (response: Response): Promise<Response> => {
-  if (!response.ok) {
-    throw new Error(await response.text());
-  }
-
-  return response;
-};
-
 export const login = (username: string, password: string): Promise<void> => {
   return fetch('/api/login', {
     method: 'POST',
@@ -40,4 +34,11 @@ export const login = (username: string, password: string): Promise<void> => {
   })
     .then(validateResponse)
     .then(() => undefined);
+};
+
+export const fetchMe = (): Promise<User> => {
+  return fetch('/api/users/me')
+    .then(validateResponse)
+    .then((response) => response.json())
+    .then((data) => UserScheme.parse(data));
 };

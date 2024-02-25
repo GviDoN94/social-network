@@ -6,6 +6,7 @@ import {
   SegmentedSwitch,
   SegmentedSwitchOption,
 } from '@/components/SegmentedSwitch';
+
 import './AuthForm.css';
 
 type AuthType = 'login' | 'registration';

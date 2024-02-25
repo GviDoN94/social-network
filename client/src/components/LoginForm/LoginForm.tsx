@@ -1,10 +1,11 @@
 import { FC, FormEventHandler, useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
 
-import { FormField } from '@/components/FormField';
-import { Button } from '@/components/Button';
 import { login } from '@/api/User';
 import { queryClient } from '@/api/queryClient';
+import { FormField } from '@/components/FormField';
+import { Button } from '@/components/Button';
+
 import './LoginForm.css';
 
 export const LoginForm: FC = () => {
@@ -14,12 +15,17 @@ export const LoginForm: FC = () => {
   const loginMutation = useMutation(
     {
       mutationFn: () => login(username, password),
+      onSuccess() {
+        queryClient.invalidateQueries({ queryKey: ['users', 'me'] });
+      },
     },
     queryClient,
   );
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
+
+    loginMutation.mutate();
   };
 
   return (

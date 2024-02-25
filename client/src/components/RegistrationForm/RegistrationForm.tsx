@@ -1,11 +1,12 @@
 import { FC, FormEventHandler, useState } from 'react';
-
-import { FormField } from '@/components/FormField';
-import { Button } from '@/components/Button';
-import './RegistrationForm.css';
 import { useMutation } from '@tanstack/react-query';
+
 import { registerUser } from '@/api/User';
 import { queryClient } from '@/api/queryClient';
+import { FormField } from '@/components/FormField';
+import { Button } from '@/components/Button';
+
+import './RegistrationForm.css';
 
 export const RegistrationForm: FC = () => {
   const [username, setUsername] = useState('');

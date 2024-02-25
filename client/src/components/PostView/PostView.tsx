@@ -1,8 +1,9 @@
 import { FC } from 'react';
 
 import { Post } from '@/api/Post';
-import './PostView.css';
 import { FetchUserView } from '@/components/UserView';
+
+import './PostView.css';
 
 function formatDate(timestamp: number): string {
   const date = new Date(timestamp);
